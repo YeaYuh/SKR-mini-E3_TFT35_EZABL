@@ -1315,7 +1315,7 @@
  *
  * Warning: Does not respect endstops!
  */
-#define BABYSTEPPING
+#define BABYSTEPPING  //TFT35
 #if ENABLED(BABYSTEPPING)
   //#define BABYSTEP_WITHOUT_HOMING
   //#define BABYSTEP_XY                     // Also enable X/Y Babystepping. Not supported on DELTA!
@@ -1323,9 +1323,9 @@
   #define BABYSTEP_MULTIPLICATOR_Z  5         // Babysteps are very small. Increase for faster motion.
   #define BABYSTEP_MULTIPLICATOR_XY 1
 
-  #define DOUBLECLICK_FOR_Z_BABYSTEPPING    // Double-click on the Status Screen for Z Babystepping.
+  #define DOUBLECLICK_FOR_Z_BABYSTEPPING    // Double-click on the Status Screen for Z Babystepping. //TFT35
   #if ENABLED(DOUBLECLICK_FOR_Z_BABYSTEPPING)
-    #define DOUBLECLICK_MAX_INTERVAL 2000   // Maximum interval between clicks, in milliseconds.
+    #define DOUBLECLICK_MAX_INTERVAL 2000   // Maximum interval between clicks, in milliseconds. //TFT35
                                             // Note: Extra time may be added to mitigate controller latency.
     #define BABYSTEP_ALWAYS_AVAILABLE     // Allow babystepping at all times (not just during movement).
     //#define MOVE_Z_WHEN_IDLE              // Jump to the move Z menu on doubleclick when printer is idle.
@@ -1336,10 +1336,10 @@
 
   #define BABYSTEP_DISPLAY_TOTAL          // Display total babysteps since last G28
 
-  #define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping
+  #define BABYSTEP_ZPROBE_OFFSET          // Combine M851 Z and Babystepping //TFT35
   #if ENABLED(BABYSTEP_ZPROBE_OFFSET)
     //#define BABYSTEP_HOTEND_Z_OFFSET      // For multiple hotends, babystep relative Z offsets
-    #define BABYSTEP_ZPROBE_GFX_OVERLAY   // Enable graphical overlay on Z-offset editor
+    #define BABYSTEP_ZPROBE_GFX_OVERLAY   // Enable graphical overlay on Z-offset editor //TFT35 //Enable EZABL & SKR 1.2 Mini E3
   #endif
 #endif
 
@@ -1721,7 +1721,7 @@
  * TMC26X Stepper Driver options
  *
  * The TMC26XStepper library is required for this stepper driver.
- * https://github.com/trinamic/TMC26XStepper
+ * https://github.com/trinamic1/TMC26XStepper
  */
 #if HAS_DRIVER(TMC26X)
 
